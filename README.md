@@ -21,6 +21,7 @@ Simple k8s deployment example with docker, minikube
 
 ## Check pod logs:
 `kubectl logs -l app=my-app`
+
 `kubectl logs -l my-app-pod-name`
 
 
