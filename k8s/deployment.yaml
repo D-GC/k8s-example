@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-app
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+        - image: gcr.io/google-samples/hello-app:1.0
+          imagePullPolicy: IfNotPresent
+          name: my-app
+          ports:
+            - containerPort: 8080
